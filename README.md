@@ -1,3 +1,5 @@
+# ¡Información del proyecto!
+
 Este repositorio contiene el código fuente del front-end para una aplicación web de renta de autos.  El proyecto está construido usando HTML, CSS y JavaScript.  Este repositorio representa únicamente la parte front-end; el backend se desarrollará por separado por otros miembros del equipo.
 
 **Funcionalidades:**
