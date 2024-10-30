@@ -1,0 +1,439 @@
+:root {
+  --color-blanco: #ffffff;
+  --color-azul-cielo: #87ceeb;
+  --color-verde-claro: #4caf50;
+  --color-negro: #000000;
+  --color-gris: #333333;
+  --color-rojo: #ff0000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Header */
+
+.header {
+  font-size: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin: 0;
+}
+
+header h1 {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navegación */
+
+.navegacion {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-gris);
+  gap: 3rem;
+  padding-right: 5rem;
+}
+
+.navegacion a:hover {
+  color: var(--color-rojo);
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-blanco);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 3rem 0;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: auto;
+}
+
+/* Formulario */
+
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.login-container {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 0.8rem;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  width: 35rem; /*  O ajusta a un porcentaje si prefieres usar .contenedor */
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 1rem;
+}
+
+.login-container p {
+  font-size: 1.4rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 2rem); /*  Ajustado a rem */
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--color-verde-claro);
+  color: white;
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  color: #3498db;
+  text-decoration: none;
+}
+
+/* indice.html */
+
+.indice-container {
+  width: 95%;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botón indice.html */
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 100%; /* Permite que el contenedor ocupe todo el ancho */
+  margin-bottom: 1rem;
+}
+
+.btn-crear {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*Ajusta el tamaño y la forma del botón, incluyendo el ancho, y un margen adecuado*/
+
+.btn-crear {
+  padding: 0.8rem 2rem; /* Padding más razonable */
+  font-size: 1rem;
+  font-weight: normal;
+  margin-right: auto; /* empuja el botón al extremo izquierdo */
+  width: fit-content; /* ajusta el ancho del botón */
+  border-radius: 5px; /* redondeo más suave */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+}
+
+/* Vehículo */
+
+.vehiculo-card {
+  display: flex;
+  flex-direction: column; /*  Columnar para imagen arriba y texto abajo */
+  width: 350px; /* Ancho aproximado de la tarjeta */
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.vehiculo-image-container {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /*  Altura fija para la imagen, se ajusta si hay imagen */
+  background-color: #f0f0f0; /* Color de fondo si no hay imagen */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+}
+
+.vehiculo-image-container img {
+  max-width: 100%; /* Asegura que la imagen no se salga */
+  max-height: 100%;
+  display: block; /* Remove extra space below image */
+}
+
+.vehiculo-info {
+  padding: 1.5rem;
+  flex: 1; /*Permite que el texto ocupe el espacio restante*/
+}
+
+.vehiculo-marca {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.vehiculo-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.vehiculo-info p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.estado {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.disponible {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around; /* Distribuye el espacio entre los botones */
+  margin-top: 1rem; /* Espacio entre el texto y los botones */
+  gap: 1rem; /* Añade un espacio entre los botones */
+}
+
+.ver-detalles,
+.reservar {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  flex: 1; /* Hace que los botones ocupen el espacio disponible */
+  border-radius: 0.4rem;
+}
+
+.ver-detalles:hover,
+.reservar:hover {
+  background-color: #2979ff;
+}
+
+/* reservaciones.html */
+
+.crear-reserva-container {
+  width: 350px;
+  margin: 2rem auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center; /* Centra el texto del contenedor */
+  font-family: sans-serif;
+}
+
+.crear-reserva-container h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.crear-reserva-container p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.crear-reserva-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left; /* Alinea las etiquetas a la izquierda */
+}
+
+.crear-reserva-container input[type="text"],
+.crear-reserva-container input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.crear-reserva-container button {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.crear-reserva-container button:hover {
+  background-color: #45a049;
+}
+
+.crear-reserva-container a {
+  color: #337ab7;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.5rem; /* Espacio entre el botón y el enlace */
+}
+
+/* ver-detalles.html */
+
+.ver-detalles-container {
+  width: 60rem; /* Ajusta el ancho según sea necesario */
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ver-detalles-container h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.vehiculo-details {
+  display: flex; /*  Para organizar imagen e información */
+  gap: 2rem;
+}
+
+.vehiculo-details img {
+  width: 30rem;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.info span {
+  font-weight: bold;
+  color: #333;
+}
+
+.volver-button {
+  display: block; /* Ocupa todo el ancho */
+  width: fit-content; /* Ajusta el ancho al contenido */
+  margin: 2rem auto; /* Centra el botón */
+  padding: 2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.volver-button:hover {
+  background-color: #45a049;
+}
+
+/* registro.html */
+
+.registro-container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 0.8rem;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  width: 35rem;
+  text-align: center;
+  margin: 2rem auto; /* Centrar el contenedor */
+}
+
+.registro-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left; /* Alinea las etiquetas a la izquierda */
+}
+
+.registro-container input[type="text"],
+.registro-container input[type="email"],
+.registro-container input[type="password"] {
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}
+
+
+.registro-container button {
+background-color: #4CAF50;
+color: white;
+padding: 1rem 2rem;
+border: none;
+border-radius: 0.4rem;
+cursor: pointer;
+width: 100%;
+margin-bottom: 1rem;
+}
+
+.registro-container button:hover {
+background-color: #45a049;
+}
+
+.registro-container a{
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #337ab7;
+}
